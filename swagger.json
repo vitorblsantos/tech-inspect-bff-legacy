@@ -1,0 +1,1 @@
+{"openapi":"3.0.0","paths":{"/v1/inspecoes":{"get":{"operationId":"ControllerInspecoes_getHello","parameters":[],"responses":{"200":{"description":""}}}}},"info":{"title":"Deméter - Accreditation Farm","description":"Caching Layer com Redis para os serviços de credenciamento do time de RFC","version":"0.0.1","contact":{}},"tags":[],"servers":[],"components":{"schemas":{}}}

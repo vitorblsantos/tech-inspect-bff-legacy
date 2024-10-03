@@ -1,0 +1,115 @@
+{
+  "extends": [
+    "standard",
+    "prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:import/warnings",
+    "plugin:node/recommended",
+    "plugin:promise/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "ignorePatterns": [
+    "dist",
+    "node_modules",
+    "start-emulators.js"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.spec.ts",
+        "*.spec.tsx",
+        "*.spec.js",
+        "*.spec.jsx"
+      ],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2024,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "import",
+    "@typescript-eslint/eslint-plugin"
+  ],
+  "root": true,
+  "rules": {
+    "comma-dangle": "error",
+    "consistent-return": "warn",
+    "consistent-this": "warn",
+    "import/default": 2,
+    "import/export": 2,
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/no-unresolved": [
+      "error"
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "no-console": 2,
+    "no-extra-semi": 1,
+    "no-use-before-define": 1,
+    "no-useless-constructor": 0,
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "after-used"
+      }
+    ],
+    "node/no-extraneous-import": [
+      "error",
+      {
+        "allowModules": [
+          "@google-cloud/firebase"
+        ]
+      }
+    ],
+    "node/no-unsupported-features/es-syntax": 0,
+    "node/no-unpublished-import": 0,
+    "node/no-unpublished-require": 0,
+    "node/no-missing-import": 0,
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "extensions": [
+          ".js",
+          ".ts"
+        ],
+        "map": [
+          ["@/", "./src"],
+          ["@/controllers/", "./src/controllers"],
+          ["@/dto/", "./src/dto"],
+          ["@/filters/", "./src/filters"],
+          ["@/interfaces/", "./src/interfaces"],
+          ["@/modules/", "./src/modules"],
+          ["@/repositories/", "./src/repositories"],
+          ["@/services/", "./src/services"],
+          ["@/utils/", "./src/utils"]
+        ]
+      }
+    }
+  }
+}
